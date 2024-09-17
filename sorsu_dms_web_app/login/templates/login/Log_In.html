@@ -1,0 +1,33 @@
+{% extends 'login_base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="heading">
+    <h1>SorSU Document Management System</h1>
+    <h3>Bulan Campus</h3>
+</div>
+<div class="log-in-container">
+  <div class="log-in">
+    <div class="log-in-text">
+        <h3>Log In</h3>
+    </div>
+
+    <div class="username-container">
+        <p>Username:</p>
+        <input type="text" id="username" placeholder="Enter Username">
+    </div>
+
+    <div class="password-container">
+        <p>Password: <a href="./Forgot_Password.html">Forgot Password?</a></p>
+        <input type="password" id="password" placeholder="Enter Password">
+    </div>
+
+    <div class="button-container">
+        <button type="submit" onclick="validateAndRedirect()">Continue</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="./dms.js"></script>
+{% endblock %}

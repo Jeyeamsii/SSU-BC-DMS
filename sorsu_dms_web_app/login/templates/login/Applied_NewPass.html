@@ -1,0 +1,23 @@
+{% extends 'login_base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="heading">
+    <h1>SorSU Document Management System</h1>
+    <h3>Bulan Campus</h3>
+</div>
+
+<div class="log-in-container">
+  <div class="log-in">
+    <div class="username-container">
+      <h3>New Password has been applied!</h3>
+    </div>
+
+    <div class="button-container">
+        <button type="submit" id="con-to-login">Continue to Login</button>
+    </div>
+  </div>
+</div>
+
+<script src="./login.js"></script>
+{% endblock %}
