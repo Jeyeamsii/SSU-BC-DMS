@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'qao',
     'login',
-    'admin'
+    'dean',
 ]
 
 MIDDLEWARE = [
@@ -80,10 +80,15 @@ WSGI_APPLICATION = 'sorsu_dms_web_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'SorSU_DMS',
+        'USER': 'root',
+        'PASSWORD': 'SoHelpMeGod3_16',
+        'HOST': '127.0.0.1',   # Set to empty string for localhost.
+        'PORT': '3306',        # Default MySQL port.
     }
 }
+
 
 
 # Password validation
@@ -121,7 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_DIRS = [BASE_DIR / "static"]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

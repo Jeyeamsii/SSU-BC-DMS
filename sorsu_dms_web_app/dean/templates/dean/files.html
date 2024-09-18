@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <link rel="stylesheet" href="dean_dashboard.css/body.css">
-  <link rel="stylesheet" href="dean_dashboard.css/sidebar.css">
-  <link rel="stylesheet" href="dean_dashboard.css/media-query1.css">
-  <link rel="stylesheet" href="dean_dashboard.css/media-query2.css">
-  <link rel="stylesheet" href="dean_dashboard.css/media-query3.css">
-  <link rel="stylesheet" href="dean_dashboard.css/media-query4.css">
-  <link rel="stylesheet" href="dean_dashboard.css/img.css">
+  <link rel="stylesheet" href="{%static 'dean/css/body.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/sidebar.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/media-query1.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/media-query2.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/media-query3.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/media-query4.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/img.css' %}">
 
   <!--Boxicons-->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -27,7 +28,7 @@
 
   <div class="sidebar">
     <div class="ssu-logo-container">
-      <img src="assets/SSU-logo.png" alt="">
+      <img src="{%static 'dean/assets/SSU-logo.png' %}" alt="">
 
       <div class="system-title">
         <p>Document Management</p>
@@ -40,44 +41,43 @@
         <i class='bx bx-chevron-left'></i>
       </div>
     </div>
-    
+    <br>
     <div class="menu-container">
-      <a href="home.html">
-        <i class='bx bx-home custom-icon'></i>
+      <a href="{%url 'home' %}">
+        <i class='bx bx-home' style="font-size: 30px;"></i>
         <p>Home</p>
       </a>
 
-      <a href="files.html" style="color:yellow">
-        <i class='bx bx-collection custom-icon' ></i>
+      <a href="{%url 'files' %}" style="background-color: rgb(117, 116, 116);">
+        <i class='bx bx-collection' style="font-size: 30px;" ></i>
         <p>Files</p>
       </a>
 
-      <a href="archive.html">
-        <i class='bx bxs-trash custom-icon' ></i>
+      <a href="{%url 'archive' %}">
+        <i class='bx bxs-trash' style="font-size: 30px;" ></i>
         <p>Archives</p>
       </a>
 
-      <a href="userManagement.html">
-        <i class='bx bxs-user-detail custom-icon'></i>
+      <a href="{%url 'userManagement' %}">
+        <i class='bx bxs-user-detail' style="font-size: 30px;"></i>
         <p>User Management</p>
       </a>       
 
     </div>
 
     <div class="profile-menu">
-      <a href="profile_page.html">
-        <i class='bx bxs-user custom-icon'></i>
+      <a href="{%url 'profilePage' %}">
+        <i class='bx bxs-user' style="font-size: 30px;"></i>
        <p> My Profile</p>
       </a>
     </div>
     
     <br>
     <br>
-    <br>
     
     <div class="log-out-switch">
       <a href="">
-        <i class='bx bx-log-out custom-icon'></i>
+        <i class='bx bx-log-out' style="font-size: 30px;"></i>
         <p>Log-out</p>
       </a>
 
@@ -155,6 +155,6 @@
 
 
  
-  <script src="admin.js"></script>
+  <script src="{%static 'dean/js/admin.js' %}"></script>
 </body>
 </html>

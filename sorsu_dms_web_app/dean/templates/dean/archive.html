@@ -5,16 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <link rel="stylesheet" href="{%static 'administrator/css/body.css' %}">
-  <link rel="stylesheet" href="{%static 'administrator/css/sidebar.css' %}">
-  <link rel="stylesheet" href="{%static 'administrator/css/media-query1.css' %}">
-  <link rel="stylesheet" href="{%static 'administrator/css/media-query2.css' %}">
-  <link rel="stylesheet" href="{%static 'administrator/css/media-query3.css' %}">
-  <link rel="stylesheet" href="{%static 'administrator/css/media-query4.css' %}">
-  <link rel="stylesheet" href="{%static 'administrator /css/archive.css' %}">
-  <link rel="stylesheet" href="{%static 'administrator /css/userManagement.css' %}">
-  <link rel="stylesheet" href="{%static 'administrator /css/img.css' %}">
-  <link rel="stylesheet" href="{%static 'administrator /css/home.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/body.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/sidebar.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/media-query1.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/media-query2.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/media-query3.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/media-query4.css' %}">
+  <link rel="stylesheet" href="{%static 'dean/css/archive.css' %}">
 
   <!--Boxicons-->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -31,7 +28,7 @@
 
   <div class="sidebar">
     <div class="ssu-logo-container">
-      <img src="{%static 'administrator/assets/SSU-logo.png' %}" alt="">
+      <img src="{%static 'dean/assets/SSU-logo.png' %}" alt="">
 
       <div class="system-title">
         <p>Document Management</p>
@@ -44,33 +41,33 @@
         <i class='bx bx-chevron-left'></i>
       </div>
     </div>
-
+    <br>
     <div class="menu-container">
       <a href="{%url 'home' %}">
-        <i class='bx bx-home custom-icon'></i>
+        <i class='bx bx-home' style="font-size: 30px;"></i>
         <p>Home</p>
       </a>
 
       <a href= "{%url 'files' %}">
-        <i class='bx bx-collection custom-icon'></i>
+        <i class='bx bx-collection' style="font-size: 30px;"></i>
         <p>Files</p>
       </a>
 
-      <a href="{%url 'archive' %}" style="color:yellow">
-        <i class='bx bxs-trash custom-icon'></i>
+      <a href="{%url 'archive' %}" style="background-color: rgb(117, 116, 116);">
+        <i class='bx bx-archive' style="font-size: 30px;"></i>
         <p>Archive</p>
       </a>
 
       <a href="{%url 'userManagement' %}">
-        <i class='bx bxs-user-detail custom-icon'></i>
+        <i class='bx bxs-user-detail' style="font-size: 30px;"></i>
         <p>User Management</p>
       </a>
 
     </div>
 
     <div class="profile-menu">
-      <a href="{%url 'profile_page' %}">
-        <i class='bx bxs-user custom-icon'></i>
+      <a href="{%url 'profilePage' %}">
+        <i class='bx bx-user' style="font-size: 30px;"></i>
        <p> My Profile</p>
       </a>
     </div> 
@@ -78,11 +75,10 @@
     <br>
     <br>
     <br>
-    <br>
 
     <div class="log-out-switch">
       <a href="">
-        <i class='bx bx-log-out custom-icon'></i>
+        <i class='bx bx-log-out' style="font-size: 30px;"></i>
         <p>Log-out</p>
       </a>
 
@@ -97,13 +93,36 @@
   </div>
 
   <main>
-    {% block content %}
 
-    {% endblock %}
+    <header>
+      <h1>Archives</h1>
+    </header>
+    <br>
+    <br>
+    
+    <div class="search-upload-sort-container">
+     <div class="search-container">
+      <input type="text" placeholder="Search">
+      <button>
+        <i class='bx bx-search'></i>
+      </button>
+     </div>
+     
+     <div class="archive">
+      <button id="archive-in">
+          <i class='bx bx-archive-in'></i>
+      </button>
+      
+      <button id="archive-out" >
+          <i class='bx bx-archive-out' ></i>
+      </button>
+     </div>
+    </div>  
+
   </main>
 
 
  
-  <script src="{%static 'administrator/js/admin.js' %}"></script>
+  <script src="{%static 'dean/js/admin.js' %}"></script>
 </body>
 </html>

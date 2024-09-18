@@ -46,6 +46,7 @@
   justify-content: center;
   opacity:1;
   letter-spacing: 1px;
+  font-weight: bold;
 }
 
 
@@ -189,12 +190,7 @@ body.dark .switch{
   background-color: var(--body-color);
 }
 
-.custom-icon {
-  font-size: 50px;
-}
-
 .My-Profile-Header{
   margin-top: 5%;
   margin-left: 3%;
 }
-

@@ -6,6 +6,7 @@
   left:0;
   padding:10px;
   transition: all .3s ease;
+  z-index: 100;
 }
 
 .ssu-logo-container{
@@ -187,5 +188,6 @@ body.dark .switch{
 }
 
 .custom-icon{
-  font-size: 40px;
+  font-size: 30px;
 }
+
