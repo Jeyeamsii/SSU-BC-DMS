@@ -1,0 +1,41 @@
+{% extends 'pc_sidebar1.html' %}
+{% load static %}
+
+{% block content %}
+<header>
+  <button id="myBtn">Create Submission Form</button>
+
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+
+      
+      <b>Create Submission Form of Faculty for:</b>
+      <br>
+      <br>
+      <br>
+  
+      <b id="Sem">Semester:</b>
+      <input type="text" placeholder="Enter Semester">
+  
+      <br>
+      <br>
+      <br>
+  
+      <b id="Sem">Academic Year:</b>
+      <input type="text" placeholder="Enter Academic Year">
+  
+      <br>
+      <br>
+  
+      <div>
+        <button id="bttn">Cancel</button><button id="bttn"><a href="./Submission.html">Create</a></button>
+      </div>
+  
+    </div>
+
+  </div>
+</header>  
+{% endblock %}

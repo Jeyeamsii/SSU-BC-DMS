@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+from django.db import connection
 
 # Create your views here.
 
@@ -18,6 +19,10 @@ def my_portfolio_page(request):
 def profile_page(request):
   return render(request,'faculty/profile_page.html')
 
-@login_required
-def faculty_dashboard(request):
-    return render(request, 'homepage.html')
+def test_db_connection(request):
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT 1")
+        return HttpResponse("Database connection successful!")
+    except Exception as e:
+        return HttpResponse(f"Database connection failed: {e}")

@@ -55,7 +55,7 @@
       </a>
 
       <a href= "{%url 'archive' %}">
-        <i class='bx bxs-trash' style="font-size: 30px;"></i>
+        <i class='bx bx-archive' style="font-size: 30px;"></i>
         <p>Archive</p>
       </a>
 
@@ -115,21 +115,31 @@
         <div id="myModal" class="modal">
 
           <div class="modal-content">
+            <form method="post">
                 <span class="close">&times;</span>
                 <b>Create New Account</b>
                 <br>
                 <br>
         
                 <b id="Sem">Name:</b>
-                <input type="text" placeholder="Enter User Name">
+                <input type="text" placeholder="Enter username....">
         
                 <br>
+
+                <b id="Sem">Email:</b>
+                <input type="text" placeholder="Enter email....">
+
                 <br>
         
                 <b id="Sem">Default Password:</b>
                 <input type="text" placeholder="123456">
         
                 <br>
+                <b id="Sem">Department:</b>
+                <select size="1">
+                <option value="option1">CICT</option>
+		            <option value="option2">CBME</option>
+                </select>
                 <br>
                 
                 
@@ -146,6 +156,7 @@
                 <div>
                   <button id="bttn">Cancel</button><button id="bttn">Create</button>
                 </div>
+            </form>
           </div>
 
         </div>

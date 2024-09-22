@@ -23,5 +23,6 @@ urlpatterns = [
     path('login/',include('login.urls')),
     path('dean/',include('dean.urls')),
     path('faculty/',include('faculty.urls')),
+    path('pc/',include('pc.urls')),
     path('accounts/', include('django.contrib.auth.urls'))
 ]

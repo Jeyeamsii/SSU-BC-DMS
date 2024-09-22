@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+from django.db import connection
 
 # Create your views here.
 def archive(request):
@@ -17,6 +18,10 @@ def userManagement(request):
 def profilePage(request):
   return render(request,'dean/profilePage.html')
 
-@login_required
-def dean_dashboard(request):
-    return render(request, 'home.html')
+def test_db_connection(request):
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT 1")
+        return HttpResponse("Database connection successful!")
+    except Exception as e:
+        return HttpResponse(f"Database connection failed: {e}")

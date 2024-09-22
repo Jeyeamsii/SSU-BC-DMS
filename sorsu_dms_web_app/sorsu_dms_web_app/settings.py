@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'qao',
     'login',
     'dean',
-    'faculty'
+    'faculty',
+    'pc'
 ]
 
 MIDDLEWARE = [

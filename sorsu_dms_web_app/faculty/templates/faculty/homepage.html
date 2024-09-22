@@ -1,17 +1,15 @@
 {% extends 'faculty_sidebar.html' %}
+{% load static %}
 
 {% block content %}
-
 <header>
-  {% load static %}
-  
     <div class="container">
       <div>
         <img id="img1" src="{% static './faculty/assets/reverse torch.png' %}" alt="img error">
       </div>
       <div class="sorsu-logo-container">
-      <img src="{% static './faculty/assets/SSU-logo.png' %}" alt=""><br>
-        <i id="heart">"Pamantasang May Puso<i class='bx bxs-heart' style='color:#b30909'  ></i>"</i>
+      <img src="{% static './faculty/assets/SSU-logo.png' %}" alt="image error"><br>
+        <i id="heart">"Pamantasang May Puso<i class='bx bxs-heart' style='color:#b30909'  ></i></i>
       </div>
       <div>
         <img id="img2" src="{% static './faculty/assets/clipart-of-torch-17-removebg.png' %}" alt="img error">
@@ -19,7 +17,7 @@
     </div>
   </div>
     <div>
-      <h2 id="hi-user">Hi Wesley Gou!</h2>
+      <h2 id="hi-user">Hi {{ user.username }}!</h2>
     </div>
     <div>
       <h1 id="h-one">Welcome to SorSU</h1>

@@ -55,7 +55,7 @@
       </a>
 
       <a href= "{%url 'archive' %}">
-        <i class='bx bxs-trash' style="font-size: 30px;"></i>
+        <i class='bx bx-archive' style="font-size: 30px;"></i>
         <p>Archive</p>
       </a>
 
@@ -97,19 +97,19 @@
    <main>
       <div class="container1">
         <div>
-          <img id="img1" src="{%static 'dean/assets/left.png' %}" alt="img error">
+          <img id="img1" src="{%static 'dean/assets/right.png' %}" alt="img error">
         </div>
         <div class="sorsu-logo-container">
         <img src="{%static 'dean/assets/SSU-logo.png' %}" alt="">
           <i id="heart">"Pamantasang May Puso<i class='bx bxs-heart' style='color:#b30909'  ></i>"</i>
         </div>
         <div>
-          <img id="img2" src="{%static 'dean/assets/right.png' %}" alt="img error">
+          <img id="img2" src="{%static 'dean/assets/left.png' %}" alt="img error">
         </div>
       </div>
     </div>
       <div>
-        <h2 id="hi-user">Hi Wesley Gou!</h2>
+        <h2 id="hi-user">Hi {{ user.username }}!</h2>
       </div>
       <div>
         <h1 id="h-one">Welcome to SorSU</h1>
