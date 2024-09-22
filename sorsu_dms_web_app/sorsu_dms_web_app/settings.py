@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'qao',
     'login',
     'dean',
+    'faculty'
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'sorsu_dms_web_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'SorSU_DMS',
+        'NAME': 'sorsu_dms',
         'USER': 'root',
         'PASSWORD': 'SoHelpMeGod3_16',
         'HOST': '127.0.0.1',   # Set to empty string for localhost.

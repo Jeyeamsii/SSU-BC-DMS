@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.db import connection
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -12,6 +13,10 @@ def files_page(request):
 
 def profile_page(request):
   return render(request,'qao/profile_page.html')
+
+@login_required
+def quality_assurance_dashboard(request):
+    return render(request, 'quality_assurance_dashboard.html')
 
 
 def test_db_connection(request):
